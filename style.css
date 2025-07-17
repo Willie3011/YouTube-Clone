@@ -19,8 +19,22 @@
   --overlay-dark-color: rgba(0, 0, 0, 0.6);
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+}
+
+header, .category-list {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--white-color);
+}
+
 .navbar {
   display: flex;
+  gap: 2rem;
   align-items: center;
   padding: 0.5rem 1rem;
   justify-content: space-between;
@@ -102,8 +116,9 @@
   border-left: 0;
 }
 
-.main-layout{
-    display: flex;
+.main-layout {
+  display: flex;
+  overflow-y: auto;
 }
 
 .main-layout .content-wrapper {
@@ -129,4 +144,81 @@
   padding: 0.4rem 0.75rem;
   border-radius: 0.5rem;
   background: var(--light-gray-color);
+}
+
+.category-list .category-button.active {
+  color: var(--white-color);
+  background: var(--black-color);
+  pointer-events: none;
+}
+
+.category-list .category-button:hover {
+  background: var(--border-color);
+}
+
+.content-wrapper .video-list {
+  display: grid;
+  gap: 1rem;
+  padding: 1.25rem 0 4rem;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.video-list .video-card {
+  text-decoration: none;
+}
+
+.video-list .video-card .video-info {
+  display: flex;
+  gap: 0.7rem;
+  padding: 0.7rem 0.5rem;
+}
+
+.video-list .video-card .thumbnail-container {
+  position: relative;
+}
+
+.video-list .video-card .thumbnail {
+  width: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 16 / 9;
+}
+
+.video-list .video-card .duration {
+  position: absolute;
+  right: 0.65rem;
+  bottom: 0.8rem;
+  color: var(--white-color);
+  font-size: 0.875rem;
+  padding: 0 0.3rem;
+  border-radius: 0.3rem;
+  background: var(--overlay-dark-color);
+}
+
+.video-list .video-card .icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+}
+
+.video-list .video-card .title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--black-color);
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.video-list .video-card .title:hover {
+  color: var(--primary-color);
+}
+
+.video-list .video-card p {
+  font-size: 0.875rem;
+  color: var(--secondary-color);
+}
+
+.video-list .video-card .channel-name {
+  margin: 0.25rem 0 0.15rem;
 }
