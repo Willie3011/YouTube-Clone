@@ -117,6 +117,10 @@ header, .category-list {
   border-left: 0;
 }
 
+.navbar .nav-right .search-button {
+  display: none;
+}
+
 .main-layout {
   display: flex;
   width: 100%;
@@ -294,21 +298,12 @@ body.sidebar-hidden .main-layout .sidebar {
     gap: 1rem;
   }
 
-  .navbar .search-form .search-input{
+  .navbar .nav-center{
     display: none;
   }
-
-  .navbar .search-form .search-button{
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: transparent;
-    border: none;
-  }
   
-  .navbar .search-form .search-button:hover {
-    background: var(--light-gray-color);
+  .navbar .nav-right .search-button {
+    display: block;
   }
 
   .container .nav-button i{

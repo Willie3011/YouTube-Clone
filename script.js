@@ -10,3 +10,7 @@ menuButton.forEach(button => {
 screenOverlay.addEventListener("click", () => {
     document.body.classList.toggle("sidebar-hidden")
 })
+
+if(window.innerWidth >= 768) {
+    document.body.classList.remove("sidebar-hidden")
+}
