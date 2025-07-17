@@ -121,6 +121,16 @@ header, .category-list {
   overflow-y: auto;
 }
 
+.main-layout .sidebar {
+  width: 280px;
+  padding: 0 0.7rem 0;
+  background: var(--white-color);
+}
+
+body.sidebar-hidden .main-layout .sidebar {
+  width: 0;
+  padding: 0;
+}
 .sidebar .link-container {
   overflow-y: auto;
   padding: 1rem 0 2rem;
@@ -133,11 +143,6 @@ header, .category-list {
   scrollbar-color: #a6a6a6 transparent;
 }
 
-.main-layout .sidebar {
-  width: 280px;
-  padding: 0 0.7rem 0;
-  background: var(--white-color);
-}
 
 .sidebar .link-section .link-item {
   display: flex;
