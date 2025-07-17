@@ -328,6 +328,10 @@ body.sidebar-hidden .main-layout .sidebar {
     left: -280px;
   }
 
+  body.sidebar-hidden .main-layout .sidebar .nav-left{
+    display: none;
+  }
+
   .main-layout .sidebar .nav-left {
     display: flex;
   }
