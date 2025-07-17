@@ -1,5 +1,7 @@
-const menuButton = document.querySelector(".menu-button");
+const menuButton = document.querySelectorAll(".menu-button");
 
-menuButton.addEventListener("click", () => {
+menuButton.forEach(button => {
+    button.addEventListener("click", () => {
     document.body.classList.toggle("sidebar-hidden")
+})
 })
