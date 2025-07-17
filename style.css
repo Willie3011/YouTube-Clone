@@ -315,6 +315,22 @@ body.sidebar-hidden .main-layout .sidebar {
     font-size: 1.2rem;
   }
 
+  .main-layout .screen-overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 15;
+    background-color: var(--overlay-dark-color);
+    transition: 0.2s ease;
+  }
+
+  body.sidebar-hidden .main-layout .screen-overlay {
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .main-layout .sidebar {
     position: absolute;
     left: 0;
