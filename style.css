@@ -121,6 +121,58 @@ header, .category-list {
   overflow-y: auto;
 }
 
+.sidebar .link-container {
+  overflow-y: auto;
+  padding: 1rem 0 2rem;
+  scrollbar-width: thin;
+  height: calc(100vh - 60px);
+  scrollbar-color: transparent transparent;
+}
+
+.sidebar .link-container:hover {
+  scrollbar-color: #a6a6a6 transparent;
+}
+
+.main-layout .sidebar {
+  width: 280px;
+  padding: 0 0.7rem 0;
+  background: var(--white-color);
+}
+
+.sidebar .link-section .link-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.938rem;
+  white-space: nowrap;
+  padding: 0.37rem 0.75rem;
+  margin-bottom: 0.25rem;
+  color: var(--black-color);
+  border-radius: 0.5rem;
+  text-decoration: none;
+}
+
+.sidebar .link-section .link-item:hover {
+  background: var(--light-gray-color);
+}
+
+.sidebar .link-section .link-item i {
+  font-size: 1.4rem;
+  margin-right: 0.63rem;
+}
+
+.sidebar .link-section .section-title {
+  font-size: 0.938rem;
+  font-weight: 600;
+  color: var(--black-color);
+  margin: 1rem 0 0.5rem 0.5rem;
+}
+
+.sidebar .section-separator {
+  height: 1px;
+  margin: 0.625rem 0;
+  background: var(--light-gray-color);
+}
+
 .main-layout .content-wrapper {
   padding: 0 1rem;
   overflow-x: hidden;
