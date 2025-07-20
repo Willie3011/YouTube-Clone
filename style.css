@@ -287,6 +287,11 @@ body.sidebar-hidden .main-layout .sidebar {
   background: var(--overlay-dark-color);
 }
 
+
+body.dark-mode .video-list .video-card .duration {
+  color: var(--black-color);
+}
+
 .video-list .video-card .icon {
   width: 36px;
   height: 36px;
